@@ -7,7 +7,7 @@ Summary(tr):	Düşen blokları yerleştirme oyunu
 Summary(uk):	ëÏÌØÏÒÏ×Á ×ÅÒÓ¦Ñ hextris ÄÌÑ X11
 Name:		cxhextris
 Version:	1.0
-Release:	25
+Release:	26
 License:	distributable
 Group:		X11/Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/arcade/tetris/%{name}.tar.z
