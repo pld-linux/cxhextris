@@ -1,0 +1,11 @@
+--- cxhextris/xio.c.orig	Wed Mar  6 21:57:46 1996
++++ cxhextris/xio.c	Wed Mar  6 21:58:12 1996
+@@ -153,7 +153,7 @@
+ 	    if (newintvl <= 0)
+ 	      break;
+ 	    tp.tv_sec = 0;
+-	    tp.tv_usec = newintvl;
++	    tp.tv_usec = (long) newintvl;
+ 	    FD_ZERO(&fdst);
+ 	    FD_SET(ConnectionNumber(display),&fdst);
+ 	    select(ConnectionNumber(display)+1,&fdst,0,0,&tp);

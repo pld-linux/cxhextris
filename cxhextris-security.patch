@@ -1,0 +1,119 @@
+--- cxhextris/xio.c.old	Sat May  2 19:53:23 1998
++++ cxhextris/xio.c	Sat May  2 19:53:51 1998
+@@ -105,6 +105,7 @@
+     } else
+       log_name = pwent->pw_name;
+ #endif
++    init_scoreboard();
+     for (i = 1; i < argc; i++) {
+ 	if (! strcmp(argv[i],"-rv")) {
+ 	    inverse = 1;
+--- cxhextris/stdsys.c.old	Wed Apr  7 03:21:20 1993
++++ cxhextris/stdsys.c	Sat May  2 19:53:00 1998
+@@ -89,6 +89,47 @@
+     npiece->column = MAXCOLUMN / 2;
+ }
+ 
++
++/*
++ *	Added by Alan Cox , RedHat May 1997
++ *
++ *	Xhextris isnt the cleanest of code, its also using a ton of toolkits. I've
++ *	swatted the bug reported by Chris Evans but I don't believe that this is the
++ *	right approach.
++ *
++ *	So we do it this way.
++ *
++ *	main calls init_scoreboard(). init_scoreboard drops all setuid/setgidness
++ *	_after_ opening up the scoreboard.
++ */
++ 
++static FILE *scores=NULL;
++
++void init_scoreboard(void)
++{
++	scores=fopen(HIGHSCOREFILE, "r+");
++	/* Drop em.. */
++	if(setregid(getgid(),getgid())==-1 ||
++		setreuid(getuid(),getuid())==-1)
++	{
++		perror("drop privileges");
++		exit(1);
++	}
++}
++
++static FILE *get_score_file(void)
++{
++	if(!scores)
++		return NULL;
++	rewind(scores);
++	return scores;
++}
++
++static void put_score_file(void)
++{
++	fflush(scores);
++}
++
+ /* This reads in the high score file.
+  */
+ read_high_scores(high_scores)
+@@ -96,12 +137,9 @@
+ {
+     int i, j;
+     FILE *high_score_file;
+-    char high_score_file_name[512];
+     char buffer[40];
+ 
+-    strcpy(high_score_file_name,HIGHSCOREFILE);
+-    
+-    if ((high_score_file = fopen(high_score_file_name , "r")) == NULL) {
++    if ((high_score_file = get_score_file()) == NULL) {
+ 	fprintf(stderr,"xhextris: Can't open high score file.\n");
+ 	return 0;
+     }
+@@ -124,7 +162,7 @@
+ 	high_scores[j].score = 0;
+ 	high_scores[j].rows = 0;
+     }
+-    fclose(high_score_file);
++    put_score_file();
+     return 1;
+ }
+ 
+@@ -139,12 +177,10 @@
+     char high_score_file_name[512];
+     char buffer[40];
+     
+-    strcpy(high_score_file_name,HIGHSCOREFILE);
+-    
+ #ifdef AFS
+     beGames();
+ #endif
+-    if ((high_score_file = fopen(high_score_file_name, "w")) == NULL) {
++    if ((high_score_file = get_score_file()) == NULL) {
+ 	fprintf(stderr,"xhextris: Can't open high score file.\n");
+ 	return 0;
+     }
+@@ -159,7 +195,7 @@
+ 	fwrite(buffer,sizeof(char),40,high_score_file);
+     }
+     fflush(high_score_file);
+-    fclose(high_score_file);
++    put_score_file();
+ /*    rename(tmp_high_score_file_name,high_score_file_name);*/
+ #ifdef AFS
+     bePlayer();
+--- hextris.c.old	Tue Apr  6 00:55:55 1993
++++ hextris.c	Sat May  2 19:57:36 1998
+@@ -490,8 +490,8 @@
+ 		high_scores[j].score = high_scores[j-1].score;
+ 		high_scores[j].rows = high_scores[j-1].rows;
+ 	    }
+-	    strcpy(high_scores[i].name, name);
+-	    strcpy(high_scores[i].userid, userid);
++	    strncpy(high_scores[i].name, name, sizeof(high_scores[i].name));
++	    strncpy(high_scores[i].userid, userid, sizeof(high_scores[i].userid));
+ 	    high_scores[i].score = score;
+ 	    high_scores[i].rows = rows;
+ 	    added = 1;

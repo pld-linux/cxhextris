@@ -1,0 +1,8 @@
+--- cxhextris/Imakefile.orig	Wed Oct 18 10:41:08 1995
++++ cxhextris/Imakefile	Wed Oct 18 10:41:09 1995
+@@ -1,4 +1,4 @@
+-       ScoreDir = $(LIBDIR)
++       ScoreDir = /var/lib/games
+       ScoreFile = xhextris-scores
+         DEFINES = -DHIGHSCOREFILE=\"$(ScoreDir)/$(ScoreFile)\" -DHEXFONTDIR=\"$(FONTDIR)/misc\"
+         HEADERS = header.h
