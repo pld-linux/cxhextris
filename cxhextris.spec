@@ -18,6 +18,7 @@ Patch1:		%{name}-axp.patch
 Patch2:		%{name}-security.patch
 Icon:		cxhextris.xpm
 Prereq:		/usr/X11R6/bin/mkfontdir
+BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
