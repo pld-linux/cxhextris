@@ -80,7 +80,7 @@ xmkmf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games/Arcade,%{_datadir}/pixmaps}
+install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install install.man \
 	BINDIR=%{_bindir} \
@@ -90,8 +90,8 @@ install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games/Arcade,%{_d
 %{__make} install.font \
 	FONTDIR=$RPM_BUILD_ROOT%{_fontsdir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
-install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -109,5 +109,5 @@ fontpostinst misc
 %{_fontsdir}/misc/hex20.pcf
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/xhextris-scores
 %{_mandir}/man1/xhextris.1*
-%{_applnkdir}/Games/Arcade/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
