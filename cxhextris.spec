@@ -35,7 +35,7 @@ in order to play CXHextris.
 cxhextrix ist eine Farbversion des populären hextris, beides nahe
 Verwandte des klassischen T*tris Video-Games, bei dem unregelmäßig
 geformte Blöcke perfekt aufeinander gestapelt werden müssen.
-Voraussetzung ist, daß X-Windows korrekt funktioniert.
+Voraussetzung ist, daß X-Window korrekt funktioniert.
 
 %description -l fr
 cxhextrix est une version en couleurs du célèbre hextris. Tous deux
