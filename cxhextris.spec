@@ -74,13 +74,17 @@ CXHextris - це кольорова верс╕я популярно╖ гри xhextris, яка под╕бна
 
 %build
 xmkmf
-%{__make} CDEBUGFLAGS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	CDEBUGFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games/Arcade,%{_datadir}/pixmaps}
 
 %{__make} install install.man \
+	BINDIR=%{_bindir} \
+	MANDIR=%{_mandir}/man1 \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__make} install.font \
@@ -104,5 +108,6 @@ fontpostinst misc
 %attr(2755,root,games) %{_bindir}/xhextris
 %{_fontsdir}/misc/hex20.pcf
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/xhextris-scores
+%{_mandir}/man1/xhextris.1*
 %{_applnkdir}/Games/Arcade/*
 %{_pixmapsdir}/*
