@@ -5,7 +5,7 @@ Summary(pl):	Kolorowa wersja gry xhextris pod X Window
 Summary(tr):	Düþen bloklarý yerleþtirme oyunu
 Name:		cxhextris
 Version:	1.0
-Release:	22
+Release:	23
 License:	distributable
 Group:		X11/Applications/Games
 Group(de):	X11/Applikationen/Spiele
@@ -73,7 +73,7 @@ install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games,%{_datadir}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install install.man
 
-%{__make} FONTDIR=$RPM_BUILD_ROOT/usr/share/fonts install.font
+%{__make} FONTDIR=$RPM_BUILD_ROOT%{_fontsdir} install.font
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
@@ -93,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(2755,root,games) %{_bindir}/xhextris
-/usr/share/fonts/misc/hex20.pcf
-%attr(664,root,games) /var/lib/games/xhextris-scores
+%{_fontsdir}/misc/hex20.pcf
+%attr(664,root,games) /var/games/xhextris-scores
 %{_applnkdir}/Games/*
 %{_pixmapsdir}/*
