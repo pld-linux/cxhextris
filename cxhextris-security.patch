@@ -104,8 +104,8 @@
  /*    rename(tmp_high_score_file_name,high_score_file_name);*/
  #ifdef AFS
      bePlayer();
---- hextris.c.old	Tue Apr  6 00:55:55 1993
-+++ hextris.c	Sat May  2 19:57:36 1998
+--- cxhextris/hextris.c.old	Tue Apr  6 00:55:55 1993
++++ cxhextris/hextris.c	Sat May  2 19:57:36 1998
 @@ -490,8 +490,8 @@
  		high_scores[j].score = high_scores[j-1].score;
  		high_scores[j].rows = high_scores[j-1].rows;
