@@ -17,10 +17,9 @@ Patch0:		%{name}-config.patch
 Patch1:		%{name}-axp.patch
 Patch2:		%{name}-security.patch
 Icon:		cxhextris.xpm
-Prereq:		/usr/X11R6/bin/mkfontdir
 BuildRequires:	XFree86-devel
+Prereq:		/usr/X11R6/bin/mkfontdir
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 CXHextris is a color version of the popular xhextris game, which is a
@@ -80,9 +79,11 @@ xmkmf
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games/Arcade,%{_datadir}/pixmaps}
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install install.man
+%{__make} install install.man \
+	DESTDIR=$RPM_BUILD_ROOT
 
-%{__make} FONTDIR=$RPM_BUILD_ROOT%{_fontsdir} install.font
+%{__make} install.font \
+	FONTDIR=$RPM_BUILD_ROOT%{_fontsdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
