@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=CXHextris
+Comment=X11 version of Hextris
+Comment[de]=Farbige X11-Version von Hextris
+Comment[fr]=Version X11 en couleurs d'hextris
+Comment[pl]=Kolorowa wersja gry xhextris pod X Window
+Comment[tr]=Düþen bloklarý yerleþtirme oyunu
+Exec=xhextris
+Icon=cxhextris.png
+Terminal=0
+Type=Application
