@@ -10,7 +10,7 @@ Patch0: cxhextris-config.patch
 Patch1: cxhextris-axp.patch
 Patch2: cxhextris-security.patch
 Prereq: /usr/X11R6/bin/mkfontdir
-BuildRoot: /var/tmp/cxhextris-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 CXHextris is a color version of the popular xhextris game, which is a
