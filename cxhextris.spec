@@ -7,7 +7,7 @@ Summary(tr):	Düþen bloklarý yerleþtirme oyunu
 Summary(uk):	ëÏÌØÏÒÏ×Á ×ÅÒÓ¦Ñ hextris ÄÌÑ X11
 Name:		cxhextris
 Version:	1.0
-Release:	24
+Release:	25
 License:	distributable
 Group:		X11/Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/arcade/tetris/%{name}.tar.z
@@ -80,13 +80,13 @@ xmkmf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games,%{_datadir}/pixmaps}
+install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games/Arcade,%{_datadir}/pixmaps}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install install.man
 
 %{__make} FONTDIR=$RPM_BUILD_ROOT%{_fontsdir} install.font
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
 
 %clean
@@ -104,5 +104,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(2755,root,games) %{_bindir}/xhextris
 %{_fontsdir}/misc/hex20.pcf
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/xhextris-scores
-%{_applnkdir}/Games/*
+%{_applnkdir}/Games/Arcade/*
 %{_pixmapsdir}/*
