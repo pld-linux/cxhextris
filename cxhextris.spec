@@ -5,11 +5,24 @@ Summary(pl):	Kolorowa wersja gry xhextris pod X Window
 Summary(tr):	Düşen blokları yerleştirme oyunu
 Name:		cxhextris
 Version:	1.0
-Release:	23
+Release:	24
 License:	distributable
 Group:		X11/Applications/Games
+Group(cs):	X11/Aplikace/Hry
+Group(da):	X11/Programmer/Spil
 Group(de):	X11/Applikationen/Spiele
+Group(es):	X11/Aplicaciones/Juegos
+Group(fr):	X11/Applications/Jeux
+Group(is):	X11/Forrit/Leikir
+Group(it):	X11/Applicazioni/Giochi
+Group(ja):	X11/¥¢¥×¥ê¥±¡¼¥·¥ç¥ó/¥²¡¼¥à
+Group(no):	X11/Applikasjoner/Spill
 Group(pl):	X11/Aplikacje/Gry
+Group(pt):	X11/Aplicações/Jogos
+Group(ru):	X11/ğÒÉÌÏÖÅÎÉÑ/éÇÒÙ
+Group(sl):	X11/Programi/Igre
+Group(sv):	X11/Tillämpningar/Spel
+Group(uk):	X11/ğÒÉËÌÁÄÎ¦ ğÒÏÇÒÁÍÉ/¶ÇÒÉ
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/arcade/tetris/%{name}.tar.z
 Source1:	%{name}.desktop
 Source2:	%{name}.png
@@ -95,6 +108,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(2755,root,games) %{_bindir}/xhextris
 %{_fontsdir}/misc/hex20.pcf
-%attr(664,root,games) /var/games/xhextris-scores
+%attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/xhextris-scores
 %{_applnkdir}/Games/*
 %{_pixmapsdir}/*
