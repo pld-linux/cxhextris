@@ -46,10 +46,10 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make DESTDIR=$RPM_BUILD_ROOT install install.man
+%{__make} DESTDIR=$RPM_BUILD_ROOT install install.man
 
 install -d $RPM_BUILD_ROOT%{_prefix}/X11R6/lib/X11/fonts/misc
-make FONTDIR=$RPM_BUILD_ROOT%{_prefix}/X11R6/lib/X11/fonts install.font
+%{__make} FONTDIR=$RPM_BUILD_ROOT%{_prefix}/X11R6/lib/X11/fonts install.font
 
 ( cd $RPM_BUILD_ROOT
 install -d .%{_sysconfdir}/X11/wmconfig
