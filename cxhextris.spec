@@ -89,8 +89,6 @@ install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_applnkdir}/Games,%{_datadir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
 
-gzip -9nf README README.Linux
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -102,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README README.Linux
 %attr(2755,root,games) %{_bindir}/xhextris
 %{_fontsdir}/misc/hex20.pcf
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/xhextris-scores
