@@ -18,7 +18,8 @@ Patch1:		%{name}-axp.patch
 Patch2:		%{name}-security.patch
 Icon:		cxhextris.xpm
 BuildRequires:	XFree86-devel
-Prereq:		/usr/X11R6/bin/mkfontdir
+Requires(post,postun):	fontpostinst
+Requires:	%{_fontsdir}/misc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -92,10 +93,10 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
 rm -rf $RPM_BUILD_ROOT
 
 %post
-(cd /usr/share/fonts/misc; /usr/X11R6/bin/mkfontdir)
+fontpostinst misc
 
 %postun
-(cd /usr/share/fonts/misc; /usr/X11R6/bin/mkfontdir)
+fontpostinst misc
 
 %files
 %defattr(644,root,root,755)
