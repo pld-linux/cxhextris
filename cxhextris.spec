@@ -21,6 +21,14 @@ Install cxhextris if you enjoy playing Tetris or Tetris-like games and
 you'd like to play one on your system.  You'll need to have X installed
 in order to play CXHextris.
 
+%description -l pl
+CXHextris jest kolorow± wersj± popularnej gry xhextris, bêd±cej klonem
+Tetrisa u¿ywaj±cym sze¶ciobocznych figur zamiast kwadratowych.
+CXHextris uruchamia siê w ¶rodowisku X Window.
+
+Nale¿y zainstalowaæ CXHextris je¶li lubi siê gry w rodzaju Tetris. Aby móc 
+graæ w CXHextris nale¿y mieæ zainstalowane X Window.
+
 %prep
 %setup -q -n cxhextris
 %patch -p1
