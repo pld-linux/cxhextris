@@ -95,4 +95,4 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/fonts/misc/hex20.pcf
 %attr(664,root,games) /var/lib/games/xhextris-scores
 %{_applnkdir}/Games/*
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
