@@ -6,15 +6,16 @@ Summary(tr):	Düþen bloklarý yerleþtirme oyunu
 Name:		cxhextris
 Version:	1.0
 Release:	22
-Copyright:	distributable
-Group:		X11/Games
-Group(pl):	X11/Gry
+License:	distributable
+Group:		X11/Applications/Games
+Group(de):	X11/Applikationen/Spiele
+Group(pl):	X11/Aplikacje/Gry
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/arcade/tetris/%{name}.tar.z
-Source1:	cxhextris.desktop
-Source2:	cxhextris.png
-Patch0:		cxhextris-config.patch
-Patch1:		cxhextris-axp.patch
-Patch2:		cxhextris-security.patch
+Source1:	%{name}.desktop
+Source2:	%{name}.png
+Patch0:		%{name}-config.patch
+Patch1:		%{name}-axp.patch
+Patch2:		%{name}-security.patch
 Icon:		cxhextris.xpm
 Prereq:		/usr/X11R6/bin/mkfontdir
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -64,7 +65,7 @@ bloklarýn - arada boþluk býrakýlmadan - bir yýðýn haline getirilmeye
 
 %build
 xmkmf
-%{__make} CDEBUGFLAGS="$RPM_OPT_FLAGS"
+%{__make} CDEBUGFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
