@@ -41,7 +41,7 @@ móc graæ w CXHextris nale¿y mieæ zainstalowane X Window.
 
 %build
 xmkmf
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
