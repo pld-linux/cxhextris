@@ -2,7 +2,9 @@ Summary:	An X Window System color version of xhextris
 Summary(de):	Farbige X11-Version von Hextris
 Summary(fr):	Version X11 en couleurs d'hextris
 Summary(pl):	Kolorowa wersja gry xhextris pod X Window
+Summary(ru):	Цветная версия hextris для X11
 Summary(tr):	DЭЧen bloklarЩ yerleЧtirme oyunu
+Summary(uk):	Кольорова верс╕я hextris для X11
 Name:		cxhextris
 Version:	1.0
 Release:	24
@@ -51,10 +53,20 @@ CXHextris uruchamia siЙ w ╤rodowisku X Window.
 Nale©y zainstalowaФ CXHextris je╤li lubi siЙ gry w rodzaju Tetris. Aby
 mСc graФ w CXHextris nale©y mieФ zainstalowane X Window.
 
+%description -l ru
+CXHextris - это цветная версия популярной игры xhextris, которая
+является Tetris-подобной игрой, использующей шестиугольники вместо
+квадратов. Эта игра требует для своей работы X Window.
+
 %description -l tr
 cxhextrix, hextris'in renkli sЭrЭmЭdЭr. Her ikisi de, garip Чekilli
 bloklarЩn - arada boЧluk bЩrakЩlmadan - bir yЩПЩn haline getirilmeye
 ГalЩЧЩldЩПЩ Tetris oyununa benzer.
+
+%description -l uk
+CXHextris - це кольорова верс╕я популярно╖ гри xhextris, яка под╕бна
+до Tetris, але використову╓ шестикутники зам╕сть квадрат╕в. Ця гра
+потребу╓ X Window.
 
 %prep
 %setup -q -n cxhextris
