@@ -21,8 +21,6 @@ Prereq:		/usr/X11R6/bin/mkfontdir
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 CXHextris is a color version of the popular xhextris game, which is a
