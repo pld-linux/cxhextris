@@ -17,7 +17,6 @@ Patch0:		%{name}-config.patch
 Patch1:		%{name}-axp.patch
 Patch2:		%{name}-security.patch
 Icon:		cxhextris.xpm
-BuildRequires:	XFree86
 BuildRequires:	XFree86-devel
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
@@ -88,8 +87,7 @@ install -d $RPM_BUILD_ROOT{/usr/share/fonts/misc,%{_desktopdir},%{_pixmapsdir}}
 	MANDIR=%{_mandir}/man1 \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__make} install.font \
-	FONTDIR=$RPM_BUILD_ROOT%{_fontsdir}
+install hex20.pcf $RPM_BUILD_ROOT%{_fontsdir}/misc
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
