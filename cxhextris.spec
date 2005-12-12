@@ -67,7 +67,7 @@ CXHextris - це кольорова верс╕я популярно╖ гри xhextris, яка под╕бна
 потребу╓ X Window.
 
 %prep
-%setup -q -n cxhextris
+%setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -106,7 +106,7 @@ fontpostinst misc
 %doc README README.Linux
 %attr(2755,root,games) %{_bindir}/xhextris
 %{_fontsdir}/misc/hex20.pcf
-%attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/xhextris-scores
+%attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) /var/games/xhextris-scores
 %{_mandir}/man1/xhextris.1*
 %{_desktopdir}/*
 %{_pixmapsdir}/*
