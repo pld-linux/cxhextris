@@ -16,7 +16,6 @@ Source2:	%{name}.png
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-axp.patch
 Patch2:		%{name}-security.patch
-Icon:		cxhextris.xpm
 BuildRequires:	XFree86-devel
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
