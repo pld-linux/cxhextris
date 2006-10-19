@@ -7,7 +7,7 @@ Summary(tr):	DЭЧen bloklarЩ yerleЧtirme oyunu
 Summary(uk):	Кольорова верс╕я hextris для X11
 Name:		cxhextris
 Version:	1.0
-Release:	27
+Release:	28
 License:	distributable
 Group:		X11/Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/arcade/tetris/%{name}.tar.z
@@ -16,7 +16,9 @@ Source2:	%{name}.png
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-axp.patch
 Patch2:		%{name}-security.patch
-BuildRequires:	XFree86-devel
+BuildRequires:	xorg-cf-files
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-util-imake
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -75,7 +77,8 @@ CXHextris - це кольорова верс╕я популярно╖ гри xhextris, яка под╕бна
 xmkmf
 %{__make} \
 	CC="%{__cc}" \
-	CDEBUGFLAGS="%{rpmcflags}"
+	CDEBUGFLAGS="%{rpmcflags}" \
+	FONTDIR=%{_fontsdir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
