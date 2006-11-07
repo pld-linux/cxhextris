@@ -110,5 +110,5 @@ fontpostinst misc
 %{_fontsdir}/misc/hex20.pcf
 %attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) /var/games/xhextris-scores
 %{_mandir}/man1/xhextris.1*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
