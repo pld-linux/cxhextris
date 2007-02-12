@@ -1,10 +1,10 @@
 Summary:	An X Window System color version of xhextris
-Summary(de.UTF-8):   Farbige X11-Version von Hextris
-Summary(fr.UTF-8):   Version X11 en couleurs d'hextris
-Summary(pl.UTF-8):   Kolorowa wersja gry xhextris pod X Window
-Summary(ru.UTF-8):   Цветная версия hextris для X11
-Summary(tr.UTF-8):   Düşen blokları yerleştirme oyunu
-Summary(uk.UTF-8):   Кольорова версія hextris для X11
+Summary(de.UTF-8):	Farbige X11-Version von Hextris
+Summary(fr.UTF-8):	Version X11 en couleurs d'hextris
+Summary(pl.UTF-8):	Kolorowa wersja gry xhextris pod X Window
+Summary(ru.UTF-8):	Цветная версия hextris для X11
+Summary(tr.UTF-8):	Düşen blokları yerleştirme oyunu
+Summary(uk.UTF-8):	Кольорова версія hextris для X11
 Name:		cxhextris
 Version:	1.0
 Release:	28
