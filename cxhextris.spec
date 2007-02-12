@@ -1,10 +1,10 @@
 Summary:	An X Window System color version of xhextris
-Summary(de):	Farbige X11-Version von Hextris
-Summary(fr):	Version X11 en couleurs d'hextris
-Summary(pl):	Kolorowa wersja gry xhextris pod X Window
-Summary(ru):	Цветная версия hextris для X11
-Summary(tr):	DЭЧen bloklarЩ yerleЧtirme oyunu
-Summary(uk):	Кольорова верс╕я hextris для X11
+Summary(de.UTF-8):   Farbige X11-Version von Hextris
+Summary(fr.UTF-8):   Version X11 en couleurs d'hextris
+Summary(pl.UTF-8):   Kolorowa wersja gry xhextris pod X Window
+Summary(ru.UTF-8):   п╕п╡п╣я┌п╫п╟я▐ п╡п╣я─я│п╦я▐ hextris п╢п╩я▐ X11
+Summary(tr.UTF-8):   Dц╪е÷en bloklarд╠ yerleе÷tirme oyunu
+Summary(uk.UTF-8):   п п╬п╩я▄п╬я─п╬п╡п╟ п╡п╣я─я│я√я▐ hextris п╢п╩я▐ X11
 Name:		cxhextris
 Version:	1.0
 Release:	28
@@ -32,40 +32,40 @@ Install cxhextris if you enjoy playing Tetris or Tetris-like games and
 you'd like to play one on your system. You'll need to have X installed
 in order to play CXHextris.
 
-%description -l de
-cxhextrix ist eine Farbversion des populДren hextris, beides nahe
-Verwandte des klassischen T*tris Video-Games, bei dem unregelmДъig
-geformte BlЖcke perfekt aufeinander gestapelt werden mЭssen.
-Voraussetzung ist, daъ X-Window korrekt funktioniert.
+%description -l de.UTF-8
+cxhextrix ist eine Farbversion des populц╓ren hextris, beides nahe
+Verwandte des klassischen T*tris Video-Games, bei dem unregelmц╓ц÷ig
+geformte Blц╤cke perfekt aufeinander gestapelt werden mц╪ssen.
+Voraussetzung ist, daц÷ X-Window korrekt funktioniert.
 
-%description -l fr
-cxhextrix est une version en couleurs du cИlХbre hextris. Tous deux
-sont des clones du cИlХbre jeu vidИo T*tris, oЫ l'on doit essayer
+%description -l fr.UTF-8
+cxhextrix est une version en couleurs du cц╘lц╗bre hextris. Tous deux
+sont des clones du cц╘lц╗bre jeu vidц╘o T*tris, oц╧ l'on doit essayer
 d'empiler parfaitement des blocs avec des formes curieuses. Ce jeu
-nИcessite X Window pour fonctionner correctement.
+nц╘cessite X Window pour fonctionner correctement.
 
-%description -l pl
-CXHextris jest kolorow╠ wersj╠ popularnej gry xhextris, bЙd╠cej klonem
-Tetrisa u©ywaj╠cym sze╤ciobocznych figur zamiast kwadratowych.
-CXHextris uruchamia siЙ w ╤rodowisku X Window.
+%description -l pl.UTF-8
+CXHextris jest kolorowд┘ wersjд┘ popularnej gry xhextris, bд≥dд┘cej klonem
+Tetrisa uе╪ywajд┘cym szeе⌡ciobocznych figur zamiast kwadratowych.
+CXHextris uruchamia siд≥ w е⌡rodowisku X Window.
 
-Nale©y zainstalowaФ CXHextris je╤li lubi siЙ gry w rodzaju Tetris. Aby
-mСc graФ w CXHextris nale©y mieФ zainstalowane X Window.
+Naleе╪y zainstalowaд┤ CXHextris jeе⌡li lubi siд≥ gry w rodzaju Tetris. Aby
+mцЁc graд┤ w CXHextris naleе╪y mieд┤ zainstalowane X Window.
 
-%description -l ru
-CXHextris - это цветная версия популярной игры xhextris, которая
-является Tetris-подобной игрой, использующей шестиугольники вместо
-квадратов. Эта игра требует для своей работы X Window.
+%description -l ru.UTF-8
+CXHextris - я█я┌п╬ я├п╡п╣я┌п╫п╟я▐ п╡п╣я─я│п╦я▐ п©п╬п©я┐п╩я▐я─п╫п╬п╧ п╦пЁя─я▀ xhextris, п╨п╬я┌п╬я─п╟я▐
+я▐п╡п╩я▐п╣я┌я│я▐ Tetris-п©п╬п╢п╬п╠п╫п╬п╧ п╦пЁя─п╬п╧, п╦я│п©п╬п╩я▄п╥я┐я▌я┴п╣п╧ я┬п╣я│я┌п╦я┐пЁп╬п╩я▄п╫п╦п╨п╦ п╡п╪п╣я│я┌п╬
+п╨п╡п╟п╢я─п╟я┌п╬п╡. п╜я┌п╟ п╦пЁя─п╟ я┌я─п╣п╠я┐п╣я┌ п╢п╩я▐ я│п╡п╬п╣п╧ я─п╟п╠п╬я┌я▀ X Window.
 
-%description -l tr
-cxhextrix, hextris'in renkli sЭrЭmЭdЭr. Her ikisi de, garip Чekilli
-bloklarЩn - arada boЧluk bЩrakЩlmadan - bir yЩПЩn haline getirilmeye
-ГalЩЧЩldЩПЩ Tetris oyununa benzer.
+%description -l tr.UTF-8
+cxhextrix, hextris'in renkli sц╪rц╪mц╪dц╪r. Her ikisi de, garip е÷ekilli
+bloklarд╠n - arada boе÷luk bд╠rakд╠lmadan - bir yд╠д÷д╠n haline getirilmeye
+ц╖alд╠е÷д╠ldд╠д÷д╠ Tetris oyununa benzer.
 
-%description -l uk
-CXHextris - це кольорова верс╕я популярно╖ гри xhextris, яка под╕бна
-до Tetris, але використову╓ шестикутники зам╕сть квадрат╕в. Ця гра
-потребу╓ X Window.
+%description -l uk.UTF-8
+CXHextris - я├п╣ п╨п╬п╩я▄п╬я─п╬п╡п╟ п╡п╣я─я│я√я▐ п©п╬п©я┐п╩я▐я─п╫п╬я≈ пЁя─п╦ xhextris, я▐п╨п╟ п©п╬п╢я√п╠п╫п╟
+п╢п╬ Tetris, п╟п╩п╣ п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐я■ я┬п╣я│я┌п╦п╨я┐я┌п╫п╦п╨п╦ п╥п╟п╪я√я│я┌я▄ п╨п╡п╟п╢я─п╟я┌я√п╡. п╕я▐ пЁя─п╟
+п©п╬я┌я─п╣п╠я┐я■ X Window.
 
 %prep
 %setup -q -n %{name}
