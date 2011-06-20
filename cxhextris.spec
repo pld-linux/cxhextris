@@ -11,6 +11,7 @@ Release:	28
 License:	distributable
 Group:		X11/Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/arcade/tetris/%{name}.tar.z
+# Source0-md5:	64fce30ebb859bcce0ff4f91f4ece0a8
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-config.patch
