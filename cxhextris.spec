@@ -7,7 +7,7 @@ Summary(tr.UTF-8):	Düşen blokları yerleştirme oyunu
 Summary(uk.UTF-8):	Кольорова версія hextris для X11
 Name:		cxhextris
 Version:	1.0
-Release:	28
+Release:	29
 License:	distributable
 Group:		X11/Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/arcade/tetris/%{name}.tar.z
